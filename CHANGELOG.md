@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-hungarian-zip-codes` will be documented in this file.
 
+## 1.0.4 - 2022-02-05
+
+- PHP 8.0 added to the composer.json
+
 ## 1.0.3 - 2022-02-05
 
 - Fix php version in composer file
