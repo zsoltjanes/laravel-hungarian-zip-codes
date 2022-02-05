@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class HungarianZipCodesSeeder extends Seeder
 {
     /** @var string */
-    private $file = __DIR__ . '../external/2Iranyitoszam-Internet_uj.json';
+    private $file = __DIR__ . '../external/Iranyitoszam-Internet_uj.json';
 
     /**
      * Run the database seeders.
