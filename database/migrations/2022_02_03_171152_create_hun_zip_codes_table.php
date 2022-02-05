@@ -14,12 +14,13 @@ class CreateHunZipCodesTable extends Migration
      */
     public function up()
     {
-        Schema::create(Config::get('hungarian_zip_codes.table_name'), function (Blueprint $table) {
+        Schema::create(Config::get('hungarian-zip-codes.table_name'), function (Blueprint $table) {
             $table->id();
             $table->string('zip_code', 4);
             $table->string('city', 255);
-            $table->string('district', 255);
-            $table->timestamps();
+            if(Config::get('hungarian-zip-codes.with_district')) {
+                $table->string('district', 255);
+            }
         });
     }
 
@@ -30,6 +31,6 @@ class CreateHunZipCodesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Config::get('hungarian_zip_codes.table_name'));
+        Schema::dropIfExists(Config::get('hungarian-zip-codes.table_name'));
     }
 }

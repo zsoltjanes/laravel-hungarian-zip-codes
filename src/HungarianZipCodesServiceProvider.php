@@ -18,9 +18,10 @@ class HungarianZipCodesServiceProvider extends ServiceProvider
         ], 'hungarian-zip-codes-config');
 
         $this->publishes([
-            __DIR__ . '/../database/migrations/' => database_path('migrations'),
-            __DIR__ . '/../database/seeder/' => database_path('seeder')
-        ], 'hungarian-zip-codes-migration-and-seeder');
+            __DIR__ . '/../database/migrations/2022_02_03_171152_create_hun_zip_codes_table.php' => database_path('migrations/2022_02222_03_171152_create_hun_zip_codes_table.php'),
+            __DIR__ . '/../database/seeders/' => database_path('seeders'),
+            __DIR__ . '/../database/external/' => database_path('external')
+        ], 'hungarian-zip-codes-migration-seeder-data');
 
         $this->mergeConfigFrom(
             __DIR__ . '/../config/hungarian-zip-codes.php', 'hungarian-zip-codes'

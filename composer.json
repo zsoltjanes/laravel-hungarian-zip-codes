@@ -13,6 +13,10 @@
             "email": "zsolt.janes@gmail.com"
         }
     ],
+    "require": {
+        "php": "^7.3",
+        "illuminate/contracts": "^8.73"
+    },
     "extra": {
         "laravel": {
             "providers": [

@@ -1,9 +1,11 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
-use Illuminate\Http\File;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class HungarianZipCodesSeeder extends Seeder
 {
@@ -19,67 +21,86 @@ class HungarianZipCodesSeeder extends Seeder
     {
         foreach ($this->getFileContent() as $key => $data) {
             if ($key === 'Települések') {
-                DB::table(Config::get('hungarian_zip_codes.table_name'))->updateOrInsert(
-                    ['zip_code' => $data['IRSZ']],
-                    [
-                        'zip_code' => $data['IRSZ'],
-                        'city' => $data['Település'],
-                    ]);
+                foreach ($data as $record) {
+                    DB::table(Config::get('hungarian-zip-codes.table_name'))->updateOrInsert(
+                        ['zip_code' => $record['IRSZ']],
+                        [
+                            'zip_code' => $record['IRSZ'],
+                            'city' => $record['Település'],
+                        ]);
+                }
             }
             if ($key === 'Bp.u.') {
-                DB::table(Config::get('hungarian_zip_codes.table_name'))->updateOrInsert(
-                    ['zip_code' => $data['IRSZ']],
-                    [
-                        'zip_code' => $data['IRSZ'],
-                        'city' => 'Budapest',
-                        'district' => $data['KER']
-                    ]);
+                foreach ($data as $record) {
+                    DB::table(Config::get('hungarian-zip-codes.table_name'))->updateOrInsert(
+                        ['zip_code' => $record['IRSZ']],
+                        [
+                            'zip_code' => $record['IRSZ'],
+                            'city' => 'Budapest',
+                            'district' => $record['KER']
+                        ]);
+                }
             }
             if ($key === 'Miskolc u.') {
-                DB::table(Config::get('hungarian_zip_codes.table_name'))->updateOrInsert(
-                    ['zip_code' => $data['IRSZ']],
-                    [
-                        'zip_code' => $data['IRSZ'],
-                        'city' => 'Miskolc',
-                    ]);
+                foreach ($data as $record) {
+                    DB::table(Config::get('hungarian-zip-codes.table_name'))->updateOrInsert(
+                        ['zip_code' => $record['IRSZ']],
+                        [
+                            'zip_code' => $record['IRSZ'],
+                            'city' => 'Miskolc',
+                        ]);
+                }
             }
             if ($key === 'Debrecen u.') {
-                DB::table(Config::get('hungarian_zip_codes.table_name'))->updateOrInsert(
-                    ['zip_code' => $data['IRSZ']],
-                    [
-                        'zip_code' => $data['IRSZ'],
-                        'city' => 'Debrecen',
-                    ]);
+                foreach ($data as $record) {
+                    DB::table(Config::get('hungarian-zip-codes.table_name'))->updateOrInsert(
+                        ['zip_code' => $record['IRSZ']],
+                        [
+                            'zip_code' => $record['IRSZ'],
+                            'city' => 'Debrecen',
+                        ]);
+                }
             }
             if ($key === 'Szeged u.') {
-                DB::table(Config::get('hungarian_zip_codes.table_name'))->updateOrInsert(
-                    ['zip_code' => $data['IRSZ']],
-                    [
-                        'zip_code' => $data['IRSZ'],
-                        'city' => 'Szeged',
-                    ]);
+                foreach ($data as $record) {
+                    DB::table(Config::get('hungarian-zip-codes.table_name'))->updateOrInsert(
+                        ['zip_code' => $record['IRSZ.']],
+                        [
+                            'zip_code' => $record['IRSZ.'],
+                            'city' => 'Szeged',
+                        ]);
+                }
             }
             if ($key === 'Pécs u.') {
-                DB::table(Config::get('hungarian_zip_codes.table_name'))->updateOrInsert(
-                    ['zip_code' => $data['IRSZ']],
-                    [
-                        'zip_code' => $data['IRSZ'],
-                        'city' => 'Szeged',
-                    ]);
+                foreach ($data as $record) {
+                    DB::table(Config::get('hungarian-zip-codes.table_name'))->updateOrInsert(
+                        ['zip_code' => $record['IRSZ.']],
+                        [
+                            'zip_code' => $record['IRSZ.'],
+                            'city' => 'Szeged',
+                        ]);
+                }
             }
             if ($key === 'Győr u.') {
-                DB::table(Config::get('hungarian_zip_codes.table_name'))->updateOrInsert(
-                    ['zip_code' => $data['IRSZ']],
-                    [
-                        'zip_code' => $data['IRSZ'],
-                        'city' => 'Győr',
-                    ]);
+                foreach ($data as $record) {
+                    DB::table(Config::get('hungarian-zip-codes.table_name'))->updateOrInsert(
+                        ['zip_code' => $record['IRSZ']],
+                        [
+                            'zip_code' => $record['IRSZ'],
+                            'city' => 'Győr',
+                        ]);
+                }
             }
         }
     }
 
+    /**
+     * Get the Json file content as json
+     *
+     * @return string
+     */
     private function getFileContent()
     {
-        return File::get($this->file);
+        return json_decode(File::get($this->file), true);
     }
 }
