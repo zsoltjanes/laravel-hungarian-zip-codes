@@ -1,0 +1,24 @@
+{
+    "name": "zsoltjanes/laravel-hungarian-zip-codes",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Zsoltjanes\\LaravelHungarianZipCodes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zsoltjanes",
+            "email": "zsolt.janes@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zsoltjanes\\LaravelHungarianZipCodes\\HungarianZipCodesServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
