@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\File;
 class HungarianZipCodesSeeder extends Seeder
 {
     /** @var string */
-    private $file = __DIR__ . '/../../vendor/zsoltjanes/laravel-hungarian-zip-codes/external/Iranyitoszam-Internet_uj.json';
+    private $file = __DIR__ . '/../../vendor/zsoltjanes/laravel-hungarian-zip-codes/database/external/Iranyitoszam-Internet_uj.json';
 
     /**
      * Run the database seeders.
