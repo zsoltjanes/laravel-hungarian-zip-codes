@@ -8,9 +8,9 @@ With this package you are able to make a new database table and seed the current
 
 ## Installation
 
-You can install the package via composer (it's recommended install only in dev environment):
+You can install the package via composer:
 ```bash
-composer require zsoltjanes/laravel-hungarian-zip-codes --dev
+composer require zsoltjanes/laravel-hungarian-zip-codes
 ```
 You have to publish the migration, the seeder and the data file:
 ```bash
