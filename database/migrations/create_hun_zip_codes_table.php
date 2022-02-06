@@ -18,9 +18,9 @@ class CreateHunZipCodesTable extends Migration
             $table->id();
             $table->string('zip_code', 4);
             $table->string('settlement', 255);
-            $table->string('parent_settlement', 255)->nullable();
+            $table->string('part_of_settlement', 255)->nullable();
             if(Config::get('hungarian-zip-codes.with_district')) {
-                $table->string('district', 255)->nullable();
+                $table->string('district', 255)->default(0)->nullable();
             }
         });
     }

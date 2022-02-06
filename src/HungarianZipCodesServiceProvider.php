@@ -20,7 +20,7 @@ class HungarianZipCodesServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../database/migrations/create_hun_zip_codes_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_hun_zip_codes_table.php'),
             __DIR__ . '/../database/seeders/' => database_path('seeders'),
-            __DIR__ . '/../database/external/' => database_path('external')
+            __DIR__ . '/../database/external/Iranyitoszam-Internet_uj.json' => database_path('external/Iranyitoszam-Internet_uj.json')
         ], 'hungarian-zip-codes-default');
 
         $this->mergeConfigFrom(

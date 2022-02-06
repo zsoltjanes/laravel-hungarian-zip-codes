@@ -1,4 +1,8 @@
 # Laravel Hungarian Zip Codes with Settlement names
+[![Latest Stable Version](http://poser.pugx.org/zsoltjanes/laravel-hungarian-zip-codes/v)](https://packagist.org/packages/zsoltjanes/laravel-hungarian-zip-codes) 
+[![Total Downloads](http://poser.pugx.org/zsoltjanes/laravel-hungarian-zip-codes/downloads)](https://packagist.org/packages/zsoltjanes/laravel-hungarian-zip-codes) 
+[![Latest Unstable Version](http://poser.pugx.org/zsoltjanes/laravel-hungarian-zip-codes/v/unstable)](https://packagist.org/packages/zsoltjanes/laravel-hungarian-zip-codes) 
+[![License](http://poser.pugx.org/zsoltjanes/laravel-hungarian-zip-codes/license)](https://packagist.org/packages/zsoltjanes/laravel-hungarian-zip-codes) 
 
 With this package you are able to make a new database table and seed the current hungarian zip codes with settlement names and Budapest's districts. The original database file can be found in the official [hungarian post office's website](https://www.posta.hu/szolgaltatasok/iranyitoszam-kereso).
 
