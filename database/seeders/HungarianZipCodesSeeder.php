@@ -42,7 +42,7 @@ class HungarianZipCodesSeeder extends Seeder
             if ($key === 'Bp.u.') {
                 foreach ($settlements as $settlement) {
 
-                    if (Config::get('hungarian-zip-codes.with_district')) {
+                    if (Config::get('hungarian-zip-codes.district')) {
                         $budapestArray = [
                             'zip_code' => $settlement['IRSZ'],
                             'settlement' => 'Budapest',
